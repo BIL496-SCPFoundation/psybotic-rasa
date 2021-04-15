@@ -1,0 +1,65 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- inform
+- basic_needs_stay
+- greet
+- affirm
+- basic_needs_eat
+- depression_cause
+- feeling_depressed
+- seek_advice
+- basic_need_hospital
+- goodbye
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+responses:
+  utter_greet:
+  - text: Hey! How are you? How can I help you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_location:
+  - text: where are you right now?
+  utter_ask_help_type:
+  - text: what kind of help do you need?
+  utter_give_advice:
+  - text: sorry to hear about that. you can read this link for coping with your loss. 'https://www.helpguide.org/articles/grief/coping-with-grief-and-loss.htm'. did you read it?
+  utter_ask_spesification:
+  - text: Sorry to hear that.. What causes your problem?
+  utter_glad_bye:
+  - text: Happy to hear that. Try to be strong and stay safe. Goodbye..
+  utter_sad_bye:
+  - text: Sorry to hear that. Try to give yourself a chance. Until then goodbye..
+  utter_nearest_shelter:
+  - text: Nearest shelter for you is this location. 'https://corbadatuzunolsun.org/' Also call these numbers for more information; "0232 361 71 51" and "0232 361 00 82". Did it help?
+  utter_nearest_meal:
+  - text: Nearest meal provider is this. 'https://corbadatuzunolsun.org/index.php/2020/06/18/askida-yemek-var/' Did it help?
+  utter_nearest_hospital:
+  - text: Nearest medical center is reachable from this link; 'https://www.mhrs.gov.tr/' Did it help?
+actions:
+- utter_ask_location
+- utter_glad_bye
+- utter_sad_bye
+- utter_goodbye
+- utter_greet
+- utter_nearest_meal
+- utter_nearest_shelter
+- utter_nearest_hospital
+- utter_ask_spesification
+- utter_give_advice
+- utter_ask_help_type
+- utter_iamabot
+- utter_did_that_help

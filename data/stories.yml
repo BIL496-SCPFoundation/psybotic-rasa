@@ -1,0 +1,209 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: depression path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feeling_depressed
+  - action: utter_ask_spesification
+  - intent: depression_cause
+  - action: utter_give_advice
+  - intent: affirm
+  - action: utter_glad_bye
+
+- story: depression no path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feeling_depressed
+  - action: utter_ask_spesification
+  - intent: depression_cause
+  - action: utter_give_advice
+  - intent: deny
+  - action: utter_sad_bye
+
+- story: stay path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: basic_needs_stay
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_shelter
+  - intent: affirm
+  - action: utter_glad_bye
+
+- story: stay no path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: basic_needs_stay
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_shelter
+  - intent: deny
+  - action: utter_sad_bye
+
+- story: eat path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: basic_needs_eat
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_meal
+  - intent: affirm
+  - action: utter_glad_bye
+
+- story: eat no path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: basic_needs_eat
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_meal
+  - intent: deny
+  - action: utter_sad_bye
+
+- story: medic path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: basic_needs_hospital
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_hospital
+  - intent: affirm
+  - action: utter_glad_bye
+
+- story: medic no path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: basic_needs_hospital
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_hospital
+  - intent: deny
+  - action: utter_sad_bye
+
+
+- story: advice giving medic
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: seek_advice
+  - action: utter_ask_help_type
+  - intent: basic_needs_hospital
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_hospital
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: advice giving eat
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: seek_advice
+  - action: utter_ask_help_type
+  - intent: basic_needs_eat
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_meal
+  - intent: affirm
+  - action: utter_glad_bye
+
+- story: advice giving stay
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: seek_advice
+  - action: utter_ask_help_type
+  - intent: basic_needs_stay
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_shelter
+  - intent: affirm
+  - action: utter_glad_bye
+
+- story: advice giving depressed
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: seek_advice
+  - action: utter_ask_help_type
+  - intent: feeling_depressed
+  - action: utter_ask_spesification
+  - intent: depression_cause
+  - action: utter_give_advice
+  - intent: affirm
+  - action: utter_glad_bye
+
+- story: interactive_story_1
+  steps:
+  - intent: feeling_depressed
+  - action: utter_ask_spesification
+  - intent: depression_cause
+  - action: utter_give_advice
+  - intent: affirm
+  - action: utter_glad_bye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: basic_needs_stay
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_shelter
+  - intent: affirm
+  - action: utter_glad_bye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: basic_needs_eat
+  - action: utter_ask_location
+  - intent: inform
+  - action: utter_nearest_meal
+  - intent: affirm
+  - action: utter_glad_bye

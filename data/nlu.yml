@@ -1,0 +1,134 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - thanks
+- intent: inform
+  examples: |
+    - Ankara
+    - İstanbul
+    - İzmir
+    - Bursa
+    - Konya
+    - Antalya
+    - Eskişehir
+    - ankara
+- intent: seek_advice
+  examples: |
+    - i need help
+    - i have problems about something
+- intent: feeling_depressed
+  examples: |
+    - i need a counsolor
+    - i feel like crying
+    - i feel depressed
+    - i think I have depression
+    - i have mood swings
+    - i feel bad
+    - i feel depressed about my loss
+    - i am having nightmares
+- intent: depression_cause
+  examples: |
+    - earthquake
+    - covid
+    - loss
+    - loss of a loved one
+    - death
+    - griefing
+    - mourning
+    - family member loss
+- intent: basic_needs_stay
+  examples: |
+    - i need somewhere to stay
+    - i am cold
+    - we need somewhere to stay
+- intent: basic_needs_eat
+  examples: |
+    - i need somewhere to eat
+    - i am hungry
+    - we need somewhere to eat
+- intent: basic_needs_hospital
+  examples: |
+    - i feel ill
+    - i am injured
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
